@@ -61,7 +61,7 @@
 # Section 2 - Comparable
 Note: You may use the String/Long compareTo methods in your code
 1. Edit the `Payment` class to extends the Comparable interface
-  - `public class Payment extends Comparable<Payment>`
+  - `public interface Payment extends Comparable<Payment>`
   - This indicate that payment can be comparable, which means it can be sorted
 2. Fix the syntax error in your CreditCard, Check, and Paypal class by adding the compare method
 3. Create a test for the `compareTo` method. Compare using the getShortDescription()
@@ -123,7 +123,7 @@ Note: You may use the String/Long compareTo methods in your code
       PaymentPresenter presenter = new PaymentPresenter();
       String expected = "Paypal Tamara Mowry tamara@mowry.com\nCheck Tia Mowry ***4551\n";
 
-      String actual = presenter.toString(payments);
+      String actual = presenter.toStringByPayerName(payments);
       assertEquals(expected, actual);
     ```
     
@@ -140,6 +140,6 @@ Note: You may use the String/Long compareTo methods in your code
       PaymentPresenter presenter = new PaymentPresenter();
       String expected = "Paypal Tamara Mowry tamara@mowry.com\nCheck Tia Mowry ***4551\n";
 
-      String actual = presenter.toString(payments);
+      String actual = presenter.toStringById(payments);
       assertEquals(expected, actual);
     ```
