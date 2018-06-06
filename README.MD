@@ -102,7 +102,8 @@ Note: You may use the String/Long compareTo methods in your code
     Payment check = new Check(81L, "Tia Mowry", "11432543", "134344551")
 
     payment[0] = paypal;
-
+    payment[1] = check;
+    
     PaymentPresenter presenter = new PaymentPresenter();
     String expected = "Check Tia Mowry ***4551\nPaypal Tia Mowry tia@mowry.com\n";
 
@@ -119,6 +120,7 @@ Note: You may use the String/Long compareTo methods in your code
       Payment check = new Check(81L, "Tia Mowry", "11432543", "134344551")
 
       payment[0] = paypal;
+      payment[1] = check;
 
       PaymentPresenter presenter = new PaymentPresenter();
       String expected = "Paypal Tamara Mowry tamara@mowry.com\nCheck Tia Mowry ***4551\n";
@@ -136,6 +138,7 @@ Note: You may use the String/Long compareTo methods in your code
       Payment check = new Check(81L, "Tia Mowry", "11432543", "134344551")
 
       payment[0] = paypal;
+      payment[1] = check;
 
       PaymentPresenter presenter = new PaymentPresenter();
       String expected = "Paypal Tamara Mowry tamara@mowry.com\nCheck Tia Mowry ***4551\n";
