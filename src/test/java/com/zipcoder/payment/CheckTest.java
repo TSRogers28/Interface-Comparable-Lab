@@ -62,8 +62,8 @@ public class CheckTest {
 
     @org.junit.Test
     public void compareTo(){
-        Check check = new Check("Jimmy Dean", "297393022");
-        PayPal pp = new PayPal("Slim Shady", "TheRealSlimShady@pleasestandup.com");
+        Check check = new Check(889L, "Jimmy Dean", "297393022", "28774821");
+        PayPal pp = new PayPal(993L,"Slim Shady", "TheRealSlimShady@pleasestandup.com");
 
         assertTrue(check.compareTo(pp) < 0 );
     }

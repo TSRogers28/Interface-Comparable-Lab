@@ -52,8 +52,8 @@ public class PayPalTest {
 
     @org.junit.Test
     public void compareTo(){
-        CreditCard cc = new CreditCard("Jimmy Dean", "1023 2983 0839 2938", 9, 2040);
-        PayPal pp = new PayPal("Slim Shady", "TheRealSlimShady@pleasestandup.com");
+        CreditCard cc = new CreditCard(889L,"Jimmy Dean", "1023 2983 0839 2938", 9, 2040);
+        PayPal pp = new PayPal(991L,"Slim Shady", "TheRealSlimShady@pleasestandup.com");
 
         assertTrue(cc.compareTo(pp) < 0 );
     }

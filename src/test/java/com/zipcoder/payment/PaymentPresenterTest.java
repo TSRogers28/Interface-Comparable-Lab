@@ -43,13 +43,16 @@ public class PaymentPresenterTest {
     //Create a test case to test the toStringByPayerName method of the PaymentPresenter class
     @Test
     public void toStringByPayerName(){
-        Payment[] payment = new Payment[1];
+        Payment[] payment = new Payment[2];
         Payment paypal = new PayPal(120L, "Tamara Mowry", "tamara@mowry.com");
+        Payment check = new Check(81L, "Tia Mowry", "11432543", "134344551");
+
 
         payment[0] = paypal;
+        payment[1] = check;
         PaymentPresenter presenter = new PaymentPresenter();
 
-        String expected = "Paypal Tamara Mowry tamara@mowry.com";
+        String expected = "Paypal Tamara Mowry tamara@mowry.com\nCheck Tia Mowry ***2543\n";
         String actual = presenter.toStringByPayerName(payment);
         assertEquals(expected, actual);
 
@@ -80,13 +83,17 @@ public class PaymentPresenterTest {
 
     @Test
     public void toStringById(){
-        Payment[] payment = new Payment[1];
-        Payment paypal = new PayPal(120L, "Tamara Mowry", "tamara@mowry.com");
+        Payment[] payment = new Payment[2];
+        Payment paypal = new PayPal(4L, "Tamara Mowry", "tamara@mowry.com");
+        Payment check = new Check(81L, "Tia Mowry", "11432543", "134344551");
+
 
         payment[0] = paypal;
+        payment[1] = check;
+
         PaymentPresenter presenter = new PaymentPresenter();
 
-        String expected = "Paypal Tamara Mowry tamara@mowry.com";
+        String expected = "Paypal Tamara Mowry tamara@mowry.com\nCheck Tia Mowry ***2543\n";
         String actual = presenter.toStringById(payment);
         assertEquals(expected, actual);
 
